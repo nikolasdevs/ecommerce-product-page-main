@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>E-commerce</title>
+  </head>
+  <body class="bg-neural-200 xl:mx-48">
+    <div class="container m-auto">
+      <header
+        class="flex items-center justify-between md:py-8 py-4 px-6 md:border-b border-neutral-300"
+      >
+        <div class="flex justify-center items-center gap-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 md:hidden›"
+            id="menuIcon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <img src="./images/logo.svg" alt="" />
+
+          <nav class="font text-neutral-400 hidden md:flex">
+            <ul class="flex gap-8">
+              <li class=" "><a href="#collections">Collections</a></li>
+              <li><a href="#men">Men</a></li>
+              <li><a href="#women">Women</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-10">
+          <img src="./images/icon-cart.svg" alt="cart" />
+          <img class="h-12" src="./images/image-avatar.png" alt="" />
+        </div>
+      </header>
+      <main class="md:my-24">
+        <section class="flex flex-col md:flex-row md:items-center xl:gap-24">
+          <div class="image relative w-full">
+            <img
+              class="absolute top-1/2 -translate-y-1/2 left-6 px-4 py-3 bg-neutral-200 rounded-full md:hidden previous cursor-pointer hover:text-primary"
+              src="./images/icon-previous.svg"
+              alt=""
+            />
+            <img
+              class="md:rounded-2xl imageDisplay"
+              src="./images/image-product-1.jpg"
+              alt=""
+            />
+            <img
+              class="absolute top-1/2 -translate-y-1/2 right-6 px-4 py-3 bg-neutral-200 rounded-full md:hidden next cursor-pointer hover:text-primary"
+              src="./images/icon-next.svg"
+              alt=""
+            />
+            <div
+              class="md:grid grid-cols-4 lg:gap-5 md:gap-3 hidden w-full lg:mt-5 md:mt-3 thumbContainer"
+            >
+              <img
+                class="rounded-xl dImage cursor-pointer hover:border-2 border-primary"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+              <img
+                class="rounded-xl dImage cursor-pointer hover:border-2 border-primary"
+                src="./images/image-product-2-thumbnail.jpg"
+                alt=""
+              />
+              <img
+                class="rounded-xl dImage cursor-pointer hover:border-2 border-primary"
+                src="./images/image-product-3-thumbnail.jpg"
+                alt=""
+              />
+              <img
+                class="rounded-xl dImage cursor-pointer hover:border-2 border-primary"
+                src="./images/image-product-4-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="px-10 lg:px-24 mt-6 flex flex-col gap-4">
+            <p class="font-bold text-sm text-primary uppercase">
+              Sneaker Company
+            </p>
+            <h1 class="text-3xl md:text-4xl font-bold text-neutral-500">
+              Fall Limited Edition Sneakers
+            </h1>
+            <p class="text-neutral-400 leading-7 font-normal">
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+            <div class="flex items-center justify-between my-2">
+              <h1 class="text-3xl font-bold flex items-center gap-4">
+                $125.00
+                <span
+                  class="text-sm p-2 px-3 font-bold text-primary bg-secondary rounded-lg"
+                  >50%</span
+                >
+              </h1>
+              <p class="font-bold text-neutral-300 line-through">$250.00</p>
+            </div>
+            <div
+              class="flex justify-between items-center p-4 bg-neutral-200 rounded-xl"
+            >
+              <img src="./images/icon-minus.svg" alt="" />
+              <p class="font-bold">0</p>
+              <img src="./images/icon-plus.svg" alt="" />
+            </div>
+            <button
+              class="flex items-center p-4 bg-primary justify-center gap-4 rounded-xl text-secondary my-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                />
+              </svg>
+
+              <p>Add to cart</p>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <div
+        class="relative z-10 md:flex"
+        role="dialog"
+        aria-labelledby="modal-title"
+        aria-modal="true"
+      >
+        <div
+          class="modal hidden fixed inset-0 bg-neutral-500 bg-opacity-75 transition-opacity justify-center"
+        >
+          <div
+            class="m-auto w-3/4 flex flex-col items-center justify-center gap-8"
+          >
+            <div class="relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.2"
+                stroke="currentColor"
+                class="w-6 h-6 absolute right-0 -top-8 hover:text-primary cursor-pointer close"
+                aria-label="close"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.2"
+                stroke="currentColor"
+                class="w-12 h-12 absolute top-1/2 -translate-y-1/2 -left-6 p-3 bg-neutral-200 rounded-full hover:text-primary cursor-pointer"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+
+              <img
+                class="md:rounded-2xl"
+                src="./images/image-product-1.jpg"
+                alt=""
+                id="shoe"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.2"
+                stroke="currentColor"
+                class="w-12 h-12 absolute top-1/2 -translate-y-1/2 -right-6 p-3 rounded-full bg-neutral-200 text-neutral-500 hover:text-primary cursor-pointer"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="w-1/2 md:flex md:items-center md:justify-center md:gap-8 hidden"
+            >
+              <img
+                class="rounded-xl"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+                id="shoe1Thumb"
+              />
+              <img
+                class="rounded-xl"
+                src="./images/image-product-2-thumbnail.jpg"
+                alt=""
+                id="shoe2Thumb"
+              />
+              <img
+                class="rounded-xl"
+                src="./images/image-product-3-thumbnail.jpg"
+                alt=""
+                id="shoe3Thumb"
+              />
+              <img
+                class="rounded-xl"
+                src="./images/image-product-4-thumbnail.jpg"
+                alt=""
+                id="shoe4Thumb"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
